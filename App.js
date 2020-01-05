@@ -19,46 +19,56 @@ const App = () => {
   return (
     <View style={{ flex: 1 }}>
       {/* menu konten */}
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, marginHorizontal: 15, }}>
         {/* Image Slider */}
         <View style={{ backgroundColor: 'yellow', height: 200 }}></View>
         {/* menu fiture */}
-        <View style={{ height: 200, flexDirection: 'row', flexWrap: 'wrap' }}>
+        <View style={{ height: 200, flexDirection: 'row', flexWrap: 'wrap', marginBottom: 10, }}>
           <View style={{ marginTop: 20, alignItems: 'center', justifyContent: 'center', height: 100, marginLeft: 10, width: '30%', borderRadius: 18, borderWidth: 1, borderColor: 'grey' }}>
-            <View style={{width:50,height:50}}>
-              <Image source={require('./src/assets/icon/alam.png')} style={{width:'100%',height:'100%'}} />
+            <View style={{ width: 50, height: 50 }}>
+              <Image source={require('./src/assets/icon/alam.png')} style={{ width: '100%', height: '100%' }} />
             </View>
-            <Text style={{fontWeight:'bold',marginTop: 10,}}>WISATA ALAM</Text>
+            <Text style={{ fontWeight: 'bold', marginTop: 10, }}>WISATA ALAM</Text>
           </View>
           <View style={{ marginTop: 20, alignItems: 'center', justifyContent: 'center', height: 100, marginLeft: 10, width: '30%', borderRadius: 18, borderWidth: 1, borderColor: 'grey' }}>
-          <View style={{width:50,height:50}}>
-              <Image source={require('./src/assets/icon/buatan.png')} style={{width:'100%',height:'100%'}} />
+            <View style={{ width: 50, height: 50 }}>
+              <Image source={require('./src/assets/icon/buatan.png')} style={{ width: '100%', height: '100%' }} />
             </View>
-            <Text style={{fontWeight:'bold',marginTop: 10,}}>WISATA BUATAN</Text>
+            <Text style={{ fontWeight: 'bold', marginTop: 10, }}>WISATA BUATAN</Text>
           </View>
           <View style={{ marginTop: 20, alignItems: 'center', justifyContent: 'center', height: 100, marginLeft: 10, width: '30%', borderRadius: 18, borderWidth: 1, borderColor: 'grey' }}>
-          <View style={{width:50,height:50}}>
-              <Image source={require('./src/assets/icon/sejarah.png')} style={{width:'100%',height:'100%'}} />
+            <View style={{ width: 50, height: 50 }}>
+              <Image source={require('./src/assets/icon/sejarah.png')} style={{ width: '100%', height: '100%' }} />
             </View>
-            <Text style={{fontWeight:'bold',marginTop: 10,}}>WISATA BUDAYA</Text>
+            <Text style={{ fontWeight: 'bold', marginTop: 10, }}>WISATA BUDAYA</Text>
           </View>
           <View style={{ marginTop: 20, alignItems: 'center', justifyContent: 'center', height: 100, marginLeft: 10, width: '30%', borderRadius: 18, borderWidth: 1, borderColor: 'grey' }}>
-          <View style={{width:50,height:50}}>
-              <Image source={require('./src/assets/icon/restaurant.png')} style={{width:'100%',height:'100%'}} />
+            <View style={{ width: 50, height: 50 }}>
+              <Image source={require('./src/assets/icon/restaurant.png')} style={{ width: '100%', height: '100%' }} />
             </View>
-            <Text style={{fontWeight:'bold',marginTop: 10,}}>WISATA KULINER</Text>
+            <Text style={{ fontWeight: 'bold', marginTop: 10, }}>WISATA KULINER</Text>
           </View>
           <View style={{ marginTop: 20, alignItems: 'center', justifyContent: 'center', height: 100, marginLeft: 10, width: '30%', borderRadius: 18, borderWidth: 1, borderColor: 'grey' }}>
-          <View style={{width:50,height:50}}>
-              <Image source={require('./src/assets/icon/hotel.png')} style={{width:'100%',height:'100%'}} />
+            <View style={{ width: 50, height: 50 }}>
+              <Image source={require('./src/assets/icon/hotel.png')} style={{ width: '100%', height: '100%' }} />
             </View>
-            <Text style={{fontWeight:'bold',marginTop: 10,}}>HOTEL</Text>
+            <Text style={{ fontWeight: 'bold', marginTop: 10, }}>HOTEL</Text>
           </View>
           <View style={{ marginTop: 20, alignItems: 'center', justifyContent: 'center', height: 100, marginLeft: 10, width: '30%', borderRadius: 18, borderWidth: 1, borderColor: 'grey' }}>
-          <View style={{width:50,height:50}}>
-              <Image source={require('./src/assets/icon/alam.png')} style={{width:'100%',height:'100%'}} />
+            <View style={{ width: 50, height: 50 }}>
+              <Image source={require('./src/assets/icon/alam.png')} style={{ width: '100%', height: '100%' }} />
             </View>
-            <Text style={{fontWeight:'bold',marginTop: 10,}}>KERAJINAN</Text>
+            <Text style={{ fontWeight: 'bold', marginTop: 10, }}>KERAJINAN</Text>
+          </View>
+        </View>
+        {/* Wisata Alam */}
+        <View style={{ height: 200, marginTop: 60 }}>
+          <Text style={{ fontWeight: 'bold', fontSize: 20, borderBottomWidth: 1, borderBottomColor: 'grey' }}>WISATA ALAM</Text>
+          <View style={{flexDirection:'row'}}>
+            <View style={{ width: 150, margin:10, height: 150, backgroundColor: 'green' }}></View>
+            <View style={{ width: 150, margin:10, height: 150, backgroundColor: 'green' }}></View>
+            <View style={{ width: 150, margin:10, height: 150, backgroundColor: 'green' }}></View>
+            <View style={{ width: 150, margin:10, height: 150, backgroundColor: 'green' }}></View>
           </View>
         </View>
       </View>

@@ -157,8 +157,8 @@ class homePage extends Component {
                 {/* menu bawah */}
                 <View style={{ backgroundColor: 'white', height: 70, flexDirection: 'row', }}>
                     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                        <TouchableOpacity onPress={ () => this.props.navigation.navigate('HomePages') }>
-                            <View style={{ width: 26, height: 26, marginHorizontal:  20 }}>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('HomePages')}>
+                            <View style={{ width: 26, height: 26, marginHorizontal: 20 }}>
                                 <Image source={require('../../../assets/icon/kerajinan.png')} style={{ width: '100%', height: '100%' }} />
                             </View>
                             <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>DASBOARD</Text>
@@ -166,17 +166,19 @@ class homePage extends Component {
                     </View>
                     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                         <TouchableOpacity onPress={() => this.props.navigation.navigate('BeritaPages')}>
-                            <View style={{ width: 26, height: 26,marginHorizontal:  10 }}>
+                            <View style={{ width: 26, height: 26, marginHorizontal: 10 }}>
                                 <Image source={require('../../../assets/icon/news.png')} style={{ width: '100%', height: '100%' }} />
                             </View>
                             <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>BERITA</Text>
                         </TouchableOpacity>
                     </View>
                     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                        <View style={{ width: 26, height: 26 }}>
-                            <Image source={require('../../../assets/icon/report.png')} style={{ width: '100%', height: '100%' }} />
-                        </View>
-                        <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>PENGADUAN</Text>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('PengaduanPage')}>
+                            <View style={{ width: 26, height: 26 }}>
+                                <Image source={require('../../../assets/icon/report.png')} style={{ width: '100%', height: '100%' }} />
+                            </View>
+                            <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>PENGADUAN</Text>
+                        </TouchableOpacity>
                     </View>
                     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                         <View style={{ width: 26, height: 26 }}>

@@ -8,37 +8,37 @@ class beritaPage extends Component {
                 <View style={{ flex: 1 }}>
                     {/* berita content */}
                     <ScrollView>
-                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center',borderWidth:1,borderColor:'grey' }}>
+                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center', borderWidth: 1, borderColor: 'grey' }}>
                             <View style={{ flex: 1 }}>
                                 <Image source={require('../../../assets/foto/m1.jpg')} style={{ width: '100%', height: '100%' }} />
                             </View>
                             <Text style={{ flex: 1, fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginHorizontal: 10, }}>PERESMIAN TEMPAT WISATA BARU DI DAERAH SUKORAME LAMONGAN</Text>
                         </View>
-                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center',borderWidth:1,borderColor:'grey' }}>
+                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center', borderWidth: 1, borderColor: 'grey' }}>
                             <View style={{ flex: 1 }}>
                                 <Image source={require('../../../assets/foto/m1.jpg')} style={{ width: '100%', height: '100%' }} />
                             </View>
                             <Text style={{ flex: 1, fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginHorizontal: 10, }}>PERESMIAN TEMPAT WISATA BARU DI DAERAH SUKORAME LAMONGAN</Text>
                         </View>
-                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center',borderWidth:1,borderColor:'grey' }}>
+                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center', borderWidth: 1, borderColor: 'grey' }}>
                             <View style={{ flex: 1 }}>
                                 <Image source={require('../../../assets/foto/m1.jpg')} style={{ width: '100%', height: '100%' }} />
                             </View>
                             <Text style={{ flex: 1, fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginHorizontal: 10, }}>PERESMIAN TEMPAT WISATA BARU DI DAERAH SUKORAME LAMONGAN</Text>
                         </View>
-                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center',borderWidth:1,borderColor:'grey' }}>
+                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center', borderWidth: 1, borderColor: 'grey' }}>
                             <View style={{ flex: 1 }}>
                                 <Image source={require('../../../assets/foto/m1.jpg')} style={{ width: '100%', height: '100%' }} />
                             </View>
                             <Text style={{ flex: 1, fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginHorizontal: 10, }}>PERESMIAN TEMPAT WISATA BARU DI DAERAH SUKORAME LAMONGAN</Text>
                         </View>
-                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center',borderWidth:1,borderColor:'grey' }}>
+                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center', borderWidth: 1, borderColor: 'grey' }}>
                             <View style={{ flex: 1 }}>
                                 <Image source={require('../../../assets/foto/m1.jpg')} style={{ width: '100%', height: '100%' }} />
                             </View>
                             <Text style={{ flex: 1, fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginHorizontal: 10, }}>PERESMIAN TEMPAT WISATA BARU DI DAERAH SUKORAME LAMONGAN</Text>
                         </View>
-                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center',borderWidth:1,borderColor:'grey' }}>
+                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center', borderWidth: 1, borderColor: 'grey' }}>
                             <View style={{ flex: 1 }}>
                                 <Image source={require('../../../assets/foto/m1.jpg')} style={{ width: '100%', height: '100%' }} />
                             </View>
@@ -65,16 +65,20 @@ class beritaPage extends Component {
                         </TouchableOpacity>
                     </View>
                     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                        <View style={{ width: 26, height: 26 }}>
-                            <Image source={require('../../../assets/icon/report.png')} style={{ width: '100%', height: '100%' }} />
-                        </View>
-                        <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>PENGADUAN</Text>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('PengaduanPage')}>
+                            <View style={{ width: 26, height: 26 }}>
+                                <Image source={require('../../../assets/icon/report.png')} style={{ width: '100%', height: '100%' }} />
+                            </View>
+                            <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>PENGADUAN</Text>
+                        </TouchableOpacity>
                     </View>
                     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                        <View style={{ width: 26, height: 26 }}>
-                            <Image source={require('../../../assets/icon/contact.png')} style={{ width: '100%', height: '100%' }} />
-                        </View>
-                        <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>TENTANG</Text>
+                        <TouchableOpacity>
+                            <View style={{ width: 26, height: 26 }}>
+                                <Image source={require('../../../assets/icon/contact.png')} style={{ width: '100%', height: '100%' }} />
+                            </View>
+                            <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>TENTANG</Text>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </View>

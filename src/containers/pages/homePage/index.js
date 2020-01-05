@@ -173,8 +173,8 @@ class homePage extends Component {
                         </TouchableOpacity>
                     </View>
                     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('PengaduanPage')}>
-                            <View style={{ width: 26, height: 26 }}>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('pengaduanPages')}>
+                            <View style={{ width: 26, height: 26 ,marginHorizontal: 25 }}>
                                 <Image source={require('../../../assets/icon/report.png')} style={{ width: '100%', height: '100%' }} />
                             </View>
                             <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>PENGADUAN</Text>

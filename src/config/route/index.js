@@ -28,11 +28,15 @@ const BeritaPages = createStackNavigator(
     }
 )
 
-const pengaduanPage = createStackNavigator(
+const pengaduanPages = createStackNavigator(
     {
-        PengaduanPage : {
+        Pengaduan : {
             screen:pengaduanPage
         }
+    },
+    {
+        headerMode:'none',
+        initialRouteName:'Pengaduan'
     }
 )
 
@@ -40,7 +44,7 @@ const SwichRoute = createSwitchNavigator(
     {
         HomePages,
         BeritaPages,
-        PengaduanPage,
+        pengaduanPages,
     },
     {
         headerMode:'none',

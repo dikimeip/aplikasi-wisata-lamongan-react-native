@@ -13,6 +13,7 @@ import {
   Text,
   Image,
 } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 const App = () => {
@@ -62,14 +63,37 @@ const App = () => {
           </View>
         </View>
         {/* Wisata Alam */}
-        <View style={{ height: 200, marginTop: 60 }}>
+        <View style={{ height: 210, marginTop: 60 }}>
           <Text style={{ fontWeight: 'bold', fontSize: 20, borderBottomWidth: 1, borderBottomColor: 'grey' }}>WISATA ALAM</Text>
-          <View style={{flexDirection:'row'}}>
-            <View style={{ width: 150, margin:10, height: 150, backgroundColor: 'green' }}></View>
-            <View style={{ width: 150, margin:10, height: 150, backgroundColor: 'green' }}></View>
-            <View style={{ width: 150, margin:10, height: 150, backgroundColor: 'green' }}></View>
-            <View style={{ width: 150, margin:10, height: 150, backgroundColor: 'green' }}></View>
-          </View>
+          <ScrollView horizontal>
+            <View style={{ flexDirection: 'row' }}>
+              <View style={{ width: 150, margin: 10, height: 150, borderWidth: 1, borderColor: 'grey', }}>
+                <View style={{ height: 100, backgroundColor: 'pink' }}>
+                  <Image source={require('./src/assets/foto/m1.jpg')} style={{ width: '100%', height: '100%', }} />
+                </View>
+                <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: 'bold' }}>Pantai Kutang</Text>
+              </View>
+              <View style={{ width: 150, margin: 10, height: 150, borderWidth: 1, borderColor: 'grey', }}>
+                <View style={{ height: 100, backgroundColor: 'pink' }}>
+                  <Image source={require('./src/assets/foto/m1.jpg')} style={{ width: '100%', height: '100%', }} />
+                </View>
+                <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: 'bold' }}>Pantai Kutang</Text>
+              </View>
+              <View style={{ width: 150, margin: 10, height: 150, borderWidth: 1, borderColor: 'grey', }}>
+                <View style={{ height: 100, backgroundColor: 'pink' }}>
+                  <Image source={require('./src/assets/foto/m1.jpg')} style={{ width: '100%', height: '100%', }} />
+                </View>
+                <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: 'bold' }}>Pantai Kutang</Text>
+              </View>
+              <View style={{ width: 150, margin: 10, height: 150, borderWidth: 1, borderColor: 'grey', }}>
+                <View style={{ height: 100, backgroundColor: 'pink' }}>
+                  <Image source={require('./src/assets/foto/m1.jpg')} style={{ width: '100%', height: '100%', }} />
+                </View>
+                <Text style={{ textAlign: 'center', marginTop: 10, fontWeight: 'bold' }}>Pantai Kutang</Text>
+              </View>
+
+            </View>
+          </ScrollView>
         </View>
       </View>
       {/* menu bawah */}

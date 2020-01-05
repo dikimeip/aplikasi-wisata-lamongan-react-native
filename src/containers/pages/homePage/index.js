@@ -14,7 +14,7 @@ class homePage extends Component {
             <View style={{ flex: 1 }}>
                 {/* menu konten */}
                 <View style={{ flex: 1, marginHorizontal: 15, }}>
-                    <ScrollView>
+                    <ScrollView style={{}}>
                         {/* Image Slider */}
                         <View style={{ backgroundColor: 'yellow', height: 200 }}></View>
                         {/* menu fiture */}

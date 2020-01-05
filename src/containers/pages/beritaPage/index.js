@@ -4,8 +4,48 @@ import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native'
 class beritaPage extends Component {
     render() {
         return (
-            <View style={{ backgroundColor: 'blue', flex: 1 }}>
-                <View style={{ flex: 1, backgroundColor: 'green' }}></View>
+            <View style={{ flex: 1 }}>
+                <View style={{ flex: 1 }}>
+                    {/* berita content */}
+                    <ScrollView>
+                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center',borderWidth:1,borderColor:'grey' }}>
+                            <View style={{ flex: 1 }}>
+                                <Image source={require('../../../assets/foto/m1.jpg')} style={{ width: '100%', height: '100%' }} />
+                            </View>
+                            <Text style={{ flex: 1, fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginHorizontal: 10, }}>PERESMIAN TEMPAT WISATA BARU DI DAERAH SUKORAME LAMONGAN</Text>
+                        </View>
+                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center',borderWidth:1,borderColor:'grey' }}>
+                            <View style={{ flex: 1 }}>
+                                <Image source={require('../../../assets/foto/m1.jpg')} style={{ width: '100%', height: '100%' }} />
+                            </View>
+                            <Text style={{ flex: 1, fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginHorizontal: 10, }}>PERESMIAN TEMPAT WISATA BARU DI DAERAH SUKORAME LAMONGAN</Text>
+                        </View>
+                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center',borderWidth:1,borderColor:'grey' }}>
+                            <View style={{ flex: 1 }}>
+                                <Image source={require('../../../assets/foto/m1.jpg')} style={{ width: '100%', height: '100%' }} />
+                            </View>
+                            <Text style={{ flex: 1, fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginHorizontal: 10, }}>PERESMIAN TEMPAT WISATA BARU DI DAERAH SUKORAME LAMONGAN</Text>
+                        </View>
+                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center',borderWidth:1,borderColor:'grey' }}>
+                            <View style={{ flex: 1 }}>
+                                <Image source={require('../../../assets/foto/m1.jpg')} style={{ width: '100%', height: '100%' }} />
+                            </View>
+                            <Text style={{ flex: 1, fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginHorizontal: 10, }}>PERESMIAN TEMPAT WISATA BARU DI DAERAH SUKORAME LAMONGAN</Text>
+                        </View>
+                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center',borderWidth:1,borderColor:'grey' }}>
+                            <View style={{ flex: 1 }}>
+                                <Image source={require('../../../assets/foto/m1.jpg')} style={{ width: '100%', height: '100%' }} />
+                            </View>
+                            <Text style={{ flex: 1, fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginHorizontal: 10, }}>PERESMIAN TEMPAT WISATA BARU DI DAERAH SUKORAME LAMONGAN</Text>
+                        </View>
+                        <View style={{ height: 150, margin: 15, flexDirection: 'row', alignItems: 'center',borderWidth:1,borderColor:'grey' }}>
+                            <View style={{ flex: 1 }}>
+                                <Image source={require('../../../assets/foto/m1.jpg')} style={{ width: '100%', height: '100%' }} />
+                            </View>
+                            <Text style={{ flex: 1, fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginHorizontal: 10, }}>PERESMIAN TEMPAT WISATA BARU DI DAERAH SUKORAME LAMONGAN</Text>
+                        </View>
+                    </ScrollView>
+                </View>
                 {/* menu bawah */}
                 <View style={{ backgroundColor: 'white', height: 70, flexDirection: 'row', }}>
                     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>

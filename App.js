@@ -11,6 +11,7 @@ import {
   StyleSheet,
   View,
   Text,
+  Image,
 } from 'react-native';
 
 
@@ -20,22 +21,30 @@ const App = () => {
       {/* menu konten */}
       <View style={{ backgroundColor: 'brown', flex: 1 }}></View>
       {/* menu bawah */}
-      <View style={{ backgroundColor: 'blue', height: 70, flexDirection: 'row', }}>
-        <View style={{ backgroundColor: 'white', flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <View style={{ backgroundColor: 'pink', width: 30, height: 30 }}></View>
-          <Text style={{ color: 'green', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>DASBOARD</Text>
+      <View style={{ backgroundColor: 'white', height: 70, flexDirection: 'row', }}>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <View style={{ width: 30, height: 30 }}>
+           <Image source={require('./src/assets/icon/home.png')} style={{width:'100%',height:'100%'}} />
+          </View>
+          <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>DASBOARD</Text>
         </View>
-        <View style={{ backgroundColor: 'green', flex: 1 ,alignItems: 'center', justifyContent: 'center' }}>
-          <View style={{ backgroundColor: 'pink', width: 30, height: 30 }}></View>
-          <Text style={{ color: 'green', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>DASBOARD</Text>
+        <View style={{ flex: 1 ,alignItems: 'center', justifyContent: 'center' }}>
+          <View style={{ width: 30, height: 30 }}>
+          <Image source={require('./src/assets/icon/news.png')} style={{width:'100%',height:'100%'}} />
+          </View>
+          <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>BERITA</Text>
         </View>
-        <View style={{ backgroundColor: 'black', flex: 1 ,alignItems: 'center', justifyContent: 'center' }}>
-          <View style={{ backgroundColor: 'pink', width: 30, height: 30 }}></View>
-          <Text style={{ color: 'green', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>DASBOARD</Text>
+        <View style={{  flex: 1 ,alignItems: 'center', justifyContent: 'center' }}>
+          <View style={{ width: 30, height: 30 }}>
+          <Image source={require('./src/assets/icon/report.png')} style={{width:'100%',height:'100%'}} />
+          </View>
+          <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>PENGADUAN</Text>
         </View>
-        <View style={{ backgroundColor: 'yellow', flex: 1 ,alignItems: 'center', justifyContent: 'center' }}>
-          <View style={{ backgroundColor: 'pink', width: 30, height: 30 }}></View>
-          <Text style={{ color: 'green', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>DASBOARD</Text>
+        <View style={{ flex: 1 ,alignItems: 'center', justifyContent: 'center' }}>
+          <View style={{ width: 30, height: 30 }}>
+          <Image source={require('./src/assets/icon/contact.png')} style={{width:'100%',height:'100%'}} />
+          </View>
+          <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>TENTANG</Text>
         </View>
       </View>
     </View>

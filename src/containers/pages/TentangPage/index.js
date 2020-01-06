@@ -7,6 +7,7 @@ class TentangPage extends Component {
             <View style={{ flex: 1}}>
                 <View style={{ flex: 1}}>
                     <Text style={{fontSize:20,fontWeight:'bold',textAlign:'center'}}>ABOUT DINAS PARIWISATA KABUPATEN LAMONGAN</Text>
+                    <Image source={require('../../../assets/foto/lmg.png')} />
                 </View>
                 <View style={{ backgroundColor: 'white', height: 70, flexDirection: 'row', }}>
                     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>

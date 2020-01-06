@@ -181,10 +181,12 @@ class homePage extends Component {
                         </TouchableOpacity>
                     </View>
                     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                        <View style={{ width: 26, height: 26 }}>
-                            <Image source={require('../../../assets/icon/contact.png')} style={{ width: '100%', height: '100%' }} />
-                        </View>
-                        <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>TENTANG</Text>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('tentangPages')}>
+                            <View style={{ width: 26, height: 26,marginHorizontal: 20, }}>
+                                <Image source={require('../../../assets/icon/contact.png')} style={{ width: '100%', height: '100%' }} />
+                            </View>
+                            <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', marginTop: 10 }}>TENTANG</Text>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </View>

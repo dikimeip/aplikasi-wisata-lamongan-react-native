@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { ScrollView, View, FlatList } from 'react-native';
 import NewsItem from '../../../components/moleculs/NewsItem';
 import Axios from 'axios'
+import { withNavigation } from 'react-navigation'
+
 
 class NewsBar extends Component {
     constructor(props) {
@@ -22,9 +24,20 @@ class NewsBar extends Component {
         })
     }
 
+    pindahHalaman = (tanggal,author,judul,isi,foto) => {
+        this.props.navigation.navigate("Detail",{
+            tanggal : tanggal,
+            author : author,
+            judul : judul,
+            isi:isi,
+            foto:foto
+        })
+    }
+
     keyExtractor = (item, index) => index.toString()
     renderItem = ({ item }) => (
-        <NewsItem nama={item.judul_berita} foto={{ uri: this.state.prefik_url + item.foto1 }} />
+        <NewsItem nama={item.judul_berita} foto={{ uri: this.state.prefik_url + item.foto1 }} 
+        tekan={(tanggal,author,judul,isi,foto) => this.pindahHalaman(item.tanggal_berita,item.author_berita,item.judul_berita,item.isi_berita,item.foto1)} />
     )
     render() {
         return (
@@ -40,4 +53,4 @@ class NewsBar extends Component {
 
 }
 
-export default NewsBar
+export default withNavigation(NewsBar)

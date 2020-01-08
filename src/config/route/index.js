@@ -2,6 +2,7 @@ import { createStackNavigator } from "react-navigation-stack";
 import homePage from "../../containers/pages/homePage";
 import beritaPage from "../../containers/pages/beritaPage";
 import pengaduanPage from '../../containers/pages/pengaduanPage'
+import DetailBerita from '../../containers/pages/DetailBerita'
 import { createSwitchNavigator,createAppContainer } from "react-navigation";
 import TentangPage from "../../containers/pages/TentangPage";
 
@@ -21,7 +22,11 @@ const BeritaPages = createStackNavigator(
     {
         Berita : {
             screen:beritaPage
+        },
+        Detail : {
+            screen : DetailBerita
         }
+        
     },
     {
         headerMode:'none',

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
 
+
 const NewsItem = (props) => {
     return (
         <TouchableOpacity onPress={props.tekan}>

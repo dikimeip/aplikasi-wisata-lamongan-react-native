@@ -28,27 +28,27 @@ class ImageSlider extends Component {
         }
     }
 
-    componentWillMount () {
-        this.setState({
-            interval: setInterval(() => {
-                this.setState({
-                    position: this.state.position === this.state.dataSource.length ? 0 : this.state.position + 1
-                });
-            }, 2000)
-        });
-    }
+    // componentWillMount () {
+    //     this.setState({
+    //         interval: setInterval(() => {
+    //             this.setState({
+    //                 position: this.state.position === this.state.dataSource.length ? 0 : this.state.position + 1
+    //             });
+    //         }, 2000)
+    //     });
+    // }
 
-    componentWillUnmount () {
-        clearInterval(this.state.interval);
-    }
+    // componentWillUnmount () {
+    //     clearInterval(this.state.interval);
+    // }
 
     render() {
         return (
             <View style={{ backgroundColor: 'yellow', height: 200 }}>
-                <Slideshow
+                {/* <Slideshow
                     dataSource={this.state.dataSource}
                     position={this.state.position}
-                    onPositionChanged={position => this.setState({ position })} />
+                    onPositionChanged={position => this.setState({ position })} /> */}
             </View>
         )
     }

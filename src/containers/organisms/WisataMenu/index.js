@@ -8,13 +8,13 @@ class WisataMenu extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            prefik_url: "http://192.168.43.230/api_pariwisata/img/",
             wisata: []
         }
     }
 
     componentDidMount = () => {
         Axios.get("http://192.168.43.230/api_pariwisata/show_wisataalam.php").then(res => {
-            console.log(res.data.data)
             this.setState({
                 wisata: res.data.data
             })
@@ -25,25 +25,19 @@ class WisataMenu extends Component {
 
     keyExtractor = (item, index) => index.toString()
     renderItem = ({ item }) => (
-        <View style={{ backgroundColor:'red',width:200,heigth:200 }}>
-            <Text>Hay {item.nama_wisata}</Text>
-        </View>
+        <WisataItem nama={item.nama_wisata} foto={{ uri: this.state.prefik_url + item.foto1 }} />
     )
 
     render() {
         return (
             <View style={{ height: 210, marginTop: 60 }}>
                 <Text style={{ fontWeight: 'bold', fontSize: 20, borderBottomWidth: 1, borderBottomColor: 'grey' }}>WISATA ALAM</Text>
-                <ScrollView horizontal>
-                    <View style={{ flexDirection: 'row' }}>
-                        <FlatList
-                            keyExtractor={this.keyExtractor}
-                            data={this.state.wisata}
-                            renderItem={this.renderItem}
-                            horizontal = {true}
-                        />
-                    </View>
-                </ScrollView>
+                <FlatList
+                    keyExtractor={this.keyExtractor}
+                    data={this.state.wisata}
+                    renderItem={this.renderItem}
+                    horizontal={true}
+                />
             </View>
         )
     }

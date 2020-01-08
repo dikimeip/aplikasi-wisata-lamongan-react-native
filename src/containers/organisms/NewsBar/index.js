@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { ScrollView, View ,FlatList} from 'react-native';
+import { ScrollView, View, FlatList } from 'react-native';
 import NewsItem from '../../../components/moleculs/NewsItem';
 import Axios from 'axios'
 
 class NewsBar extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            prefik_url :"http://192.168.43.230/api_pariwisata/img/",
-            wisata : []
+            prefik_url: "http://192.168.43.230/api_pariwisata/img/",
+            wisata: []
         }
     }
 

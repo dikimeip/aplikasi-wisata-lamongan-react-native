@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, Image, ScrollView, FlatList } from 'react-native'
+import { View, Text, Image, ScrollView, FlatList, TextInput, SafeAreaView } from 'react-native'
 import FootBar from '../../organisms/FootBar';
 import Axios from 'axios'
 
@@ -15,6 +15,12 @@ class DetailBerita extends Component {
             isi: "",
             foto: "",
             komentar: [],
+            input: {
+                id: "",
+                nama: "",
+                email: "",
+                isi: ""
+            }
         }
     }
 
@@ -25,7 +31,9 @@ class DetailBerita extends Component {
             judul: this.props.navigation.state.params.judul,
             isi: this.props.navigation.state.params.isi,
             foto: this.props.navigation.state.params.foto,
-            // id: this.props.navigation.state.params.id,
+            input: {
+                id: this.props.navigation.state.params.id
+            }
         })
         const id = this.props.navigation.state.params.id
         Axios.get("http://192.168.43.230/api_pariwisata/show_komentar.php?id=" + id).then(res => {
@@ -63,20 +71,10 @@ class DetailBerita extends Component {
                             <Text style={{ fontWeight: 'bold', fontSize: 15 }}>{this.state.tanggal}</Text>
                         </View>
                         <Text style={{ fontSize: 15, marginTop: 10 }} >{this.state.isi}</Text>
-                    </View>
-                    <View style={{marginTop:10}}>
-                        <Text style={{ fontWeight: 'bold', fontSize: 14, marginVertical: 10 }}>Masukan Nama</Text>
-                        <TextInput placeholder="Masukan Nama Anda" style={{ borderColor: 'grey', borderWidth: 1, borderRadius: 20, }} onChangeText={input => this.setState({ nama: input })} value={this.state.nama} />
+                       
                     </View>
                 </ScrollView>
-                <View style={{ marginHorizontal: 20, marginTop: 0 }}>
-                    <Text style={{ fontWeight: 'bold', fontSize: 20, }}>KOMENTAR</Text>
-                    <FlatList
-                        keyExtractor={this.keyExtractor}
-                        data={this.state.komentar}
-                        renderItem={this.renderItem}
-                    />
-                </View>
+
                 <FootBar />
             </View>
         )

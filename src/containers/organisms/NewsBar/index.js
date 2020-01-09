@@ -24,20 +24,22 @@ class NewsBar extends Component {
         })
     }
 
-    pindahHalaman = (tanggal,author,judul,isi,foto) => {
+    pindahHalaman = (tanggal,author,judul,isi,foto,id) => {
         this.props.navigation.navigate("Detail",{
+
             tanggal : tanggal,
             author : author,
             judul : judul,
             isi:isi,
-            foto:foto
+            foto:foto,
+            id : id
         })
     }
 
     keyExtractor = (item, index) => index.toString()
     renderItem = ({ item }) => (
         <NewsItem nama={item.judul_berita} foto={{ uri: this.state.prefik_url + item.foto1 }} 
-        tekan={(tanggal,author,judul,isi,foto) => this.pindahHalaman(item.tanggal_berita,item.author_berita,item.judul_berita,item.isi_berita,item.foto1)} />
+        tekan={(tanggal,author,judul,isi,foto,id) => this.pindahHalaman(item.tanggal_berita,item.author_berita,item.judul_berita,item.isi_berita,item.foto1,item.id_berita)} />
     )
     render() {
         return (

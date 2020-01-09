@@ -24,14 +24,28 @@ class ShowPage extends Component {
         })
     }
 
+    pindahHalaman = (nama,tanggal,daya,fasilitas,akses,map,foto) => {
+        this.props.navigation.navigate("ShowWisata",{
+            nama : nama,
+            tanggal : tanggal,
+            daya : daya,
+            fasilitas:fasilitas,
+            akses:akses,
+            map : map,
+            foto : foto
+        })
+    }
+
     keyExtractor = (item, index) => index.toString()
     renderItem = ({ item }) => (
-        <NewsItem nama={item.nama_wisata} foto={{ uri: this.state.prefik_url + item.foto1 }} />
+        <NewsItem nama={item.nama_wisata} foto={{ uri: this.state.prefik_url + item.foto1 }}
+        tekan={(nama,tanggal,daya,fasilitas,akses,map,foto) => this.pindahHalaman(item.nama_wisata,item.tanggal_wisata,item.daya_tarik,item.fasilitas,item.akses,item.map_wisata,item.foto1)}
+        />
     )
 
     render() {
         return (
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1 }}> 
                 <View style={{ flex: 1, bacgroundColor: 'blue' }}>
                 <FlatList
                     keyExtractor={this.keyExtractor}
